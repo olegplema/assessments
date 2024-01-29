@@ -1,15 +1,15 @@
 
-@if (graph){
-  <div class="graph-container">
+@if (isOpen){
+<!--  <div class="container">-->
     <canvas
       baseChart
-      class="chart graph"
+      class="graph"
       [data]="barChartData"
       [options]="barChartOptions"
       [plugins]="barChartPlugins"
       [type]="barChartType"
     >
     </canvas>
-  </div>
+<!--  </div>-->
 }
 

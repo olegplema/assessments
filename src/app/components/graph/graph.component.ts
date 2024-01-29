@@ -2,11 +2,9 @@ import {Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {HttpService} from "../../services/http.service";
 import {IGraph} from "../../types/graph";
 import {Subscription} from "rxjs";
-import {AuthService} from "../../services/auth.service";
 import {ChartType, ChartData, ChartConfiguration} from "chart.js"
 import {BaseChartDirective, NgChartsModule} from "ng2-charts";
 import DataLabelsPlugin from 'chartjs-plugin-datalabels'
-import {colors} from "@angular/cli/src/utilities/color";
 import {AuthStateService} from "../../services/auth-state.service";
 
 @Component({
@@ -22,6 +20,8 @@ export class GraphComponent implements OnInit, OnDestroy{
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined
   @Input() id: number
+
+  isOpen: boolean = false
   graph: IGraph
   private dataSubscription: Subscription
   barChartType: ChartType
@@ -31,7 +31,7 @@ export class GraphComponent implements OnInit, OnDestroy{
     scales: {
       x: {},
       y: {
-        min: 10,
+        min: 0,
       },
     },
     plugins: {
@@ -54,9 +54,9 @@ export class GraphComponent implements OnInit, OnDestroy{
     this.dataSubscription = this.httpService.getGraph(this.authState.auth.token, this.id)
       .subscribe(graph => {
         this.graph = graph
-        console.log(this.id,graph)
         this.barChartType = this.graph.type
         this.barChartData = this.createDataset(this.graph)
+        this.isOpen = true
       })
   }
 

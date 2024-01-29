@@ -20,9 +20,9 @@
       <span [ngClass]="{'open': isGraphOpen, 'button': true}" (click)="setIsGraphOpen()">𒌋</span>
     </div>
   </div>
-  @if (isGraphOpen){
-    <div class="graph-container">
+  <div class="graph-container" [@appearance]="isGraphOpen" (@appearance.done)="animationDone()">
+    @if (isAnimationDone){
       <app-graph [id]="report.id"/>
-    </div>
-  }
+    }
+  </div>
 </div>
