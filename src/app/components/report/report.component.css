@@ -36,11 +36,14 @@
   line-height: 35px;
   border: 1px solid #00CED1;
   transition: .3s;
+  pointer-events: auto;
 }
 
 .button:hover{
   background-color: #AFEEEE;
   cursor: pointer;
+  pointer-events: auto;
+
 }
 
 .button-container{
@@ -65,15 +68,46 @@
   border: 2px solid #00CED1;
   margin: 10px 30px 0 30px;
   padding: 4px;
+  pointer-events: none;
 }
 
-.hr{
-  border: 1px solid #00CED1;
-  margin-top: 7px;
-  margin-bottom: 7px;
+.graph-container .button {
+  pointer-events: auto;
 }
-
 
 .not-active{
   opacity: .5;
+}
+
+
+@media (max-width: 450px) {
+  .report-container{
+    pointer-events: auto;
+  }
+
+  .graph-container{
+    max-height: 30vh;
+  }
+
+  .name{
+    font-size: 15px;
+  }
+
+  .button{
+    display: none;
+  }
+
+  .button-container{
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .report-container{
+    pointer-events: auto;
+  }
+
+  .graph-container{
+    max-height: 30vh;
+  }
 }

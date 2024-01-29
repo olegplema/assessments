@@ -30,3 +30,10 @@
 .button:hover{
   background-color: #00BFFF;
 }
+
+
+@media (max-width: 400px) {
+  .title{
+    font-size: 20px;
+  }
+}

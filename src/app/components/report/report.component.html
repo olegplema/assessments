@@ -1,5 +1,5 @@
 
-<div [ngClass]="{'report-container': true, 'not-active': !report.active}">
+<div [ngClass]="{'report-container': true, 'not-active': !report.active}" (click)="setIsGraphOpen()">
   <div class="report">
     <div class="info">
       <img [ngSrc]="report.image_url" width="150" height="112" [alt]="report.name">
@@ -17,11 +17,11 @@
       </div>
     </div>
     <div class="button-container">
-      <span [ngClass]="{'open': isGraphOpen, 'button': true}" (click)="setIsGraphOpen()">𒌋</span>
+      <span [ngClass]="{'open': isGraphOpen, 'button': true}">𒌋</span>
     </div>
   </div>
   <div class="graph-container" [@appearance]="isGraphOpen" (@appearance.done)="animationDone()">
-    @if (isAnimationDone){
+    @if (isAnimationDone && isGraphOpen){
       <app-graph [id]="report.id"/>
     }
   </div>

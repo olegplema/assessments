@@ -1,9 +1,14 @@
 
+.table-container{
+  overflow-x: auto;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  font-family: 'Arial', sans-serif;
 }
 
 th, td {

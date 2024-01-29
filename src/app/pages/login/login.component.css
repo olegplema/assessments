@@ -30,7 +30,12 @@
   background-color: #00CED1;
 }
 
-
 .button:hover{
   background-color: #00BFFF;
+}
+
+@media (max-width: 420px) {
+  .input{
+    width: 300px;
+  }
 }

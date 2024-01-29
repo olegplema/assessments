@@ -28,10 +28,10 @@ export class LoginComponent implements OnInit{
   }
 
   form = new FormGroup({
-    email: new FormControl<string>('admin@deepersignals.com',{
+    email: new FormControl<string>('',{
       validators:Validators.email,
       nonNullable: true}),
-    password: new FormControl<string>('password', {
+    password: new FormControl<string>('', {
       nonNullable: true})
   })
 
