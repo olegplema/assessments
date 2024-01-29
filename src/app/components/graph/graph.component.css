@@ -1,0 +1,11 @@
+
+
+.graph-container{
+  height: 40vh;
+  display: flex;
+  margin-top: 10px;
+}
+
+.graph{
+  margin-top: 10px;
+}

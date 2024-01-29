@@ -1,0 +1,28 @@
+
+<div class="report-container">
+  <div class="report">
+    <div class="info">
+      <img [ngSrc]="report.image_url" width="150" height="112" [alt]="report.name">
+      <div class="name-and-resolved">
+        <p class="name">{{ report.name }}</p>
+        <p>
+          {{ report.users_resolved }}
+          @if (report.users_resolved > 1){
+            users
+          } @else {
+            user
+          }
+          resolved
+        </p>
+      </div>
+    </div>
+    <div class="button-container">
+      <span [ngClass]="{'open': isGraphOpen, 'button': true}" (click)="setIsGraphOpen()">𒌋</span>
+    </div>
+  </div>
+  @if (isGraphOpen){
+    <div class="graph-container">
+      <app-graph [id]="report.id"/>
+    </div>
+  }
+</div>

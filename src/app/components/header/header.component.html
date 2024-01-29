@@ -1,0 +1,10 @@
+
+
+<header class="header">
+  <h1 class="title">{{ title }}</h1>
+  <div class="buttons">
+      @for (button of routerService.activeButtons | async; track button.path){
+        <button (click)="routerService.moveByButton(button)" class="button">{{button.name}}</button>
+      }
+  </div>
+</header>

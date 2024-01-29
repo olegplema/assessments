@@ -1,0 +1,74 @@
+
+
+.image{
+  width: 100px;
+  height: auto;
+}
+
+.report{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.name-and-resolved{
+  margin-left: 7px;
+}
+
+.info{
+  display: flex;
+}
+
+.button{
+  transform: rotate(90deg);
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 2px 3px;
+  min-width: 35px;
+  height: 35px;
+  font-size: 26px;
+  line-height: 35px;
+  border: 1px solid #00CED1;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: #AFEEEE;
+  cursor: pointer;
+}
+
+.button-container{
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.button.open{
+  transform: rotate(-90deg);
+}
+
+.graph-container{
+  /*height: 40vh;*/
+  display: flex;
+  justify-content: center;
+}
+
+.report-container{
+  border: 2px solid #00CED1;
+  margin: 10px 30px 0 30px;
+  padding: 4px;
+}
+
+.hr{
+  border: 1px solid #00CED1;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+

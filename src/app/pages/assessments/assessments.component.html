@@ -1,0 +1,8 @@
+
+<app-error/>
+
+<div>
+  @for (report of reports$|async; track report.id){
+    <app-report [report]="report" />
+  }
+</div>

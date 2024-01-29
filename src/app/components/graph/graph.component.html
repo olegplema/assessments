@@ -1,0 +1,15 @@
+
+@if (graph){
+  <div class="graph-container">
+    <canvas
+      baseChart
+      class="chart graph"
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [type]="barChartType"
+    >
+    </canvas>
+  </div>
+}
+
