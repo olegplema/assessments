@@ -1,5 +1,5 @@
 
-<div class="report-container">
+<div [ngClass]="{'report-container': true, 'not-active': !report.active}">
   <div class="report">
     <div class="info">
       <img [ngSrc]="report.image_url" width="150" height="112" [alt]="report.name">
